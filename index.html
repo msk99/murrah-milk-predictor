@@ -123,7 +123,7 @@
   <!-- PREDICTION TOOL -->
   <div class="card p-6" id="predictor-section">
     <h2 class="text-2xl font-bold mb-1" style="color: var(--primary);">Predict Milk Yield</h2>
-    <p class="text-gray-500 mb-6 text-sm">Enter the three predictor values to estimate Total Lactation Milk Yield (TLMY) with an approximate prediction interval.</p>
+    <p class="text-gray-500 mb-6 text-sm">Enter the three predictor values to estimate Total Lactation Milk Yield (TLMY) with an approximate prediction interval (from bootstrap resampling).</p>
 
     <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
       <!-- PY -->
@@ -165,7 +165,6 @@
       <div id="result-content" class="fade-in" style="display:none;">
         <p class="text-sm text-gray-500 mb-1">Predicted Total Lactation Milk Yield</p>
         <p class="text-4xl font-bold" style="color: var(--primary);" id="pred-value">--</p>
-        <p class="text-sm text-gray-500 mt-2">Approximate Prediction Interval (from bootstrap resampling)</p>
         <div class="ci-bar" id="ci-bar">
           <div class="ci-range" id="ci-range"></div>
           <div class="ci-point" id="ci-point"></div>
@@ -518,7 +517,7 @@ function runPrediction() {
 
   document.getElementById('pred-value').textContent = pred.toFixed(1) + ' kg';
   document.getElementById('ci-text').textContent =
-    'Prediction range: ' + ci.lower.toFixed(1) + ' kg  to  ' + ci.upper.toFixed(1) + ' kg';
+    'Prediction range: ' + ci.lower.toFixed(0) + ' kg  to  ' + ci.upper.toFixed(0) + ' kg';
 
   // CI bar visualization
   const barMin = Math.max(0, ci.lower - 200);
