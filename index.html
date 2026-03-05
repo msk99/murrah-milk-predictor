@@ -123,7 +123,7 @@
   <!-- PREDICTION TOOL -->
   <div class="card p-6" id="predictor-section">
     <h2 class="text-2xl font-bold mb-1" style="color: var(--primary);">Predict Milk Yield</h2>
-    <p class="text-gray-500 mb-6 text-sm">Enter the three predictor values to estimate Total Lactation Milk Yield (TLMY) with a 95% bootstrap prediction interval.</p>
+    <p class="text-gray-500 mb-6 text-sm">Enter the three predictor values to estimate Total Lactation Milk Yield (TLMY) with an approximate prediction interval.</p>
 
     <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
       <!-- PY -->
@@ -518,7 +518,7 @@ function runPrediction() {
 
   document.getElementById('pred-value').textContent = pred.toFixed(1) + ' kg';
   document.getElementById('ci-text').textContent =
-    '95% PI: ' + ci.lower.toFixed(1) + ' kg  to  ' + ci.upper.toFixed(1) + ' kg';
+    'Prediction range: ' + ci.lower.toFixed(1) + ' kg  to  ' + ci.upper.toFixed(1) + ' kg';
 
   // CI bar visualization
   const barMin = Math.max(0, ci.lower - 200);
