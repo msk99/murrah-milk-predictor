@@ -1,0 +1,22 @@
+Estimation of Total Lactation Milk Yield and Standard Lactation Milk Yield of Murrah Buffalo 
+
+
+Model 
+
+
+
+
+Training ML Model: 2-5 sentences.
+
+Credit:
+Developed By: - 
+Adelaide University: Dr Mehar Khatkar
+ICAR-IASRI, New Delhi, Anil Kumar, Sukanta Dash
+University of Adelaide: Dr Mehar Khatkar
+ICAR – CIRB, Ashok K Boora, Sarita Yadav, Dr Sunesh Balhara, Dr Ashok Balhara, Dr. Tarun Kumar Bhattacharya
+
+Project:Climate Smart Buffalo Farming
+Using Digital Support Systems Funded by the Bill & Melinda Gates Foundation  (2024–2029)
+
+
+
